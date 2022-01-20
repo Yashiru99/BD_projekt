@@ -1,0 +1,15 @@
+.container {
+    padding: 16px 0;
+    text-align:left;
+}
+
+input{
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #00B4CC;
+    border-radius: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    color: #9DBFAF;
+}

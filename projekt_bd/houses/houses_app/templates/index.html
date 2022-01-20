@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'houses_app/index_new.css' %}" >
+<body>
+    <div class="wrap">
+        <div>
+            <h2 class="middle"> Search for a city </h2>
+            <form method="POST" action = "results">
+            {% csrf_token %}
+             <input type="text" 
+            class="searchTerm" name='result' placeholder="Search for a keyword">
+        </div>
+    </form>
+    </div>
+    <div class="middle">
+        <h2> Major cities </h2>
+        <span> <a href="{% url 'warsaw' %}"> Warsaw</a> </span> <span> | </span>
+        <span> <a href="{% url 'cracow' %}"> Cracow</a> </span> <span> | </span>
+        <span> <a href="{% url 'poznan' %}"> Poznan</a> </span>
+    </div>
+    <div class="right_top">
+        <p>Add an annoucement</p>
+        <button type="submit"><a href="{% url 'annoucement' %}"> Add an announcement </a></button>
+    </div>
+    <div class="top_left">
+        <p> Compare major cities</p>
+        <button type="submit"><a href="{% url 'comparing' %}"> Compare major cities </a></button>
+    </div>
+</body>
+</html>

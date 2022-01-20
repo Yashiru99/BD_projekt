@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'houses_app/annoucement.css' %}" >
+</head>
+<form method="post">
+    <div class="container">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </div>
+    <input type="submit" value="Submit">
+</form>

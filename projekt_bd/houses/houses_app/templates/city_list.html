@@ -1,0 +1,10 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'houses_app/city_list.css' %}">
+</head>
+
+<ul class="check-list">
+    {% for apartment in apartments %}
+        <li> {{ apartment }}</li>
+    {% endfor %}
+</ul>

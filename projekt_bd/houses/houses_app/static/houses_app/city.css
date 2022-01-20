@@ -1,0 +1,10 @@
+img {
+	opacity: 0.2;
+}
+.opis{
+	position: relative;
+	top: 80%;
+	border: 3px solid #00B4CC;
+	border-radius: 5px 5px 5px 5px;
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'houses_app/city.css' %}">
+</head>
+<body>
+    <div>
+        <p class="opis"> {{ text }}</p>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form1.as_p }}
+    <button type="submit" name="form1"> Show me! </button>
+    <p>Some queries on filtered</p>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form2.as_p }}
+    <button type="submit" name="form2"> Show me! </button>
+    </form>
+    <p> Looking how many apartments with higher price there is with the same number of rooms and similar sq</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form3.as_p }}
+        <button type="submit" name="form3"> Show me! </button>
+    </form>
+
+    <p> Some of our apartments </p>
+    <div>
+        <ul>
+            {% for apartment in apartments %}
+            <li> {{ apartment }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
